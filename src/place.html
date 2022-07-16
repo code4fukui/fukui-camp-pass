@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" />
-  <title>福井市町村クイズ</title>
+  <title></title>
 </head>
 
 <body>
@@ -26,12 +26,8 @@
       <div class="container is-centered is-vcentered">
         <div class="columns is-desktop">
 
-          <div class="column is-6">
-            <img id="cityImage">
-          </div>
-
-          <div class="column is-6">
-            <p class="title has-text-centered">この市区町村はどれ？</p>
+          <div class="column is-12">
+            <p class="title has-text-centered"></p>
 
             <div id="detail"></div>
             <div id="needItemIds"></div>
@@ -74,7 +70,14 @@
         const title = document.querySelector("#title");
         title.innerText = place.name;
 
+        const detail = document.querySelector("#detail");
+        detail.innerText = place.detail;
 
+        const needItemIds = document.querySelector("#needItemIds");
+        needItemIds.innerText = place.needItemIds;
+
+        const rentItemIds = document.querySelector("#rentItemIds");
+        rentItemIds.innerText = place.rentItemIds;
       }
 
       const imgCity = document.querySelector("#cityImage");
