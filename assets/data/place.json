@@ -1,0 +1,23 @@
+{
+    "amount": 1,
+    "places": [
+        {
+            "id": 1,
+            "name": "キャンプ場A",
+            "detail": "詳細情報",
+            "needItemIds": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "rentItemIds": [
+                6,
+                7,
+                8
+            ],
+            "businessHours": "24時間 年中無休"
+        }
+    ]
+}

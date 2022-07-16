@@ -33,19 +33,9 @@
           <div class="column is-6">
             <p class="title has-text-centered">この市区町村はどれ？</p>
 
-            <div id="choices"></div>
-
-            <div class="result">
-              <div class="container">
-                <p class="title has-text-centered" id="correctStatus">
-              </div>
-
-              <div class="container">
-                <p class="subtitle has-text-centered" id="correctCity">
-              </div>
-            </div>
-
-            <button id="nextQuestion" class="button is-large is-hidden">次へ</button>
+            <div id="detail"></div>
+            <div id="needItemIds"></div>
+            <div id="rentItemIds"></div>
 
           </div>
         </div>
@@ -61,17 +51,31 @@
     let amount;
     let correctCount = 0;
 
+    let places;
+
     window.onload = async (event) => {
-      const response = await fetch("/api/questions");
+      const response = await fetch("/data/place.json");
       apiBody = JSON.parse(await response.text());
-      quizList = apiBody.questions;
+      places = apiBody.places;
       amount = apiBody.amount;
-      showQuestion(0);
+      showPlace(getParam('id'));
     };
 
-    function showQuestion(questionIndex) {
-      console.log("showQuestion");
+    function showPlace(questionIndex) {
+      console.log("showPlace");
       const question = quizList[questionIndex];
+
+      var index = places.findIndex(v => v.id === questionIndex);
+      if (index !== -1) {
+        console.log(obj[index]);
+
+        place = places[index];
+
+        const title = document.querySelector("#title");
+        title.innerText = place.name;
+
+
+      }
 
       const imgCity = document.querySelector("#cityImage");
       imgCity.setAttribute("src", question.imgPath);
@@ -147,6 +151,16 @@
 
       const buttonNextQuestion = document.querySelector("#nextQuestion");
       buttonNextQuestion.classList.add("is-hidden")
+    }
+
+    function getParam(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
   </script>
 

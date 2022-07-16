@@ -25,18 +25,18 @@ serve(async (req) => {
   }
 
 
-  if (pathname === "/questions") {
-    return await serveFile(req, getFilePath("src/question.html"));
+  if (pathname === "/place") {
+    return await serveFile(req, getFilePath("src/place.html"));
   }
 
   if (pathname === "/styles.css") {
     return new Response(await Deno.readTextFile("./src/css/styles.css"), { headers: { "Content-Type": "text/css" } });
   }
 
-  if (pathname.startsWith("/images")) {
+  if (pathname.startsWith("/data")) {
     return serveDir(req, {
-      fsRoot: "assets/municipal_images",
-      urlRoot: "images",
+      fsRoot: "assets/data",
+      urlRoot: "data",
       showDirListing: true,
       enableCors: true,
     });

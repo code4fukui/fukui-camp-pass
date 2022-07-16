@@ -5,20 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://code4fukui.github.io/csv-map/csv-map.js"></script>
     <link rel="stylesheet" href="styles.css" />
-    <title>福井市町村クイズ</title>
+    <title>Camp Pass</title>
 </head>
 
 <body>
-    <section class="hero is-fullheight is-link">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <p class="title">福井市町村クイズ</p>
-                <p class="subtitle">福井の市町村、全部わかるかな？</p>
-                <button class="button is-large is-primary" onclick="location.href='/questions'">始める</button>
+
+    <section>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    Camp pass
+                </a>
             </div>
-        </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/my-tickets">
+                        購入済みチケット
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <csv-map src="/data/camp.csv">
+        </csv-map>
     </section>
+
 </body>
 
 </html>
