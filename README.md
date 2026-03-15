@@ -2,6 +2,8 @@
 
 A web application that allows users to explore and learn about various municipal areas in Fukui Prefecture, Japan through a quiz-like experience.
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 ## Demo
 The application is deployed at: https://takameron-fukui-camp-pass.deno.dev
 
