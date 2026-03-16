@@ -36,4 +36,4 @@ deno run --allow-net --allow-read --watch serve.ts
 The application uses local data files to generate the quiz questions and display the map. The data files are located in the `assets/data` directory.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+MIT License — see [LICENSE](LICENSE).

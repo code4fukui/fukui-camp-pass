@@ -1,13 +1,13 @@
 # fukui-camp-pass
 
-福井県のキャンプ場や観光スポットを検索・閲覧できるウェブアプリケーションです。
+福井県の市町村名クイズや、キャンプ場や観光スポットの情報を閲覧できるウェブアプリケーションです。
 
 ## デモ
-https://takameron-fukui-camp-pass.deno.dev
+アプリケーションは以下のURLにデプロイされています: https://takameron-fukui-camp-pass.deno.dev
 
 ## 機能
 - 福井県の地図上にキャンプ場や観光スポットを表示
-- 施設の詳細情報の確認
+- キャンプ場や観光スポットの詳細情報の確認
 - 福井県の市町村名クイズ
 
 ## 必要環境
@@ -31,6 +31,8 @@ deno task start
 ## データ・API
 - キャンプ場や観光スポットの情報は `assets/data/camp.csv` から取得
 - 市町村名クイズデータは `quiz.ts` から生成
+- アイテム情報は `assets/data/item.json` から取得
+- 施設情報は `assets/data/place.json` から取得
 
 ## ライセンス
 MIT License
