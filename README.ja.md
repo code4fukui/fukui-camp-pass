@@ -18,7 +18,7 @@
 ## 使い方
 1. リポジトリをクローンします:
 ```
-git clone https://github.com/your-username/fukui-camp-pass.git
+git clone https://github.com/code4fukui/fukui-camp-pass.git
 ```
 2. プロジェクトディレクトリに移動します:
 ```

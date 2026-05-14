@@ -20,7 +20,7 @@ This project is built using Deno, a modern, secure, and fast runtime for JavaScr
 ## Usage
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/fukui-camp-pass.git
+git clone https://github.com/code4fukui/fukui-camp-pass.git
 ```
 2. Change into the project directory:
 ```
